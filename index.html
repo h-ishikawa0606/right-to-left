@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Shuffle</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.3"></script>
+<script src="js/jquery.shuffle.min.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<script>
+	$(function() {
+		$('#btn li').on('click', function() {
+			var $this = $(this),
+				$grid = $('#animationList');
+
+			$('#btn .active').removeClass('active');
+			$this.addClass('active');
+			$grid.shuffle($this.data('group'));
+		});
+
+		$('#animationList').shuffle({
+			group: 'all',
+			speed: 700,
+			easing: 'ease-in-out'
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="wrap">
+	<div class="top">
+	<div class="front"><img src="images/profile.png"  alt=""/></div>
+<div class="nav">	
+<h2>PORTFOLIO SITE</h2>
+		<ul>
+			<li><a href="about.html">PROFILE</a></li>
+			<li><a href="index.html">WORKS</a></li>
+			<li><a href="https://twitter.com/dude_art_66"><p><i class="fab fa-twitter"></i></p></a></li>
+			<li><a href="https://lrrno.tumblr.com/"><p><i class="fab fa-tumblr"></i></p></a></li>
+			
+        </ul>
+	  </div>
+	</div>
+	
+<div id="wrapper">
+	<ul id="btn">
+	  <li data-group="all" class="active alpha">ALL</li>
+	  <li data-group="red" class="alpha">GRAPHIC</li>
+	  <li data-group="blue" class="alpha">LOGO</li>
+	  <li data-group="green" class="alpha">WEB</li>
+		<li data-group="pro" class="alpha">EVENT</li>
+		<li data-group="others" class="alpha">OTHERS</li>
+  </ul>
+	<ul id="animationList">
+	  <li data-groups='["red"]'><div class="sample1 df"><img src="images/gr_03.png" alt=""/></div></li>
+	  <li data-groups='["red"]'><div class="sample1"><img src="images/gr_02.png"  alt=""/></div></li>
+		<li data-groups='["red"]'><div class="sample1"><img src="images/gr_01_アートボード 1.jpg"  alt=""/></div></li>
+		<li data-groups='["others"]'><div class="sample1"><img src="images/b_01.jpg"alt=""/></div></li>
+		<li data-groups='["pro"]'><img class="yellow
+			Z" src="images/ev_01.JPG" width="290" height="200" alt=""/>
+	  <li data-groups='["pro"]'><img src="images/ev_02.jpg" width="290" height="200" alt=""/></li>
+	  <li data-groups='["blue"]'><img src="images/lo_02.png" width="290" height="200" alt=""/></li>
+	  <li data-groups='["blue"]'><div class="sample1"><img src="images/アセット 3@228x-100.jpg"  alt=""/></li>
+	  <li data-groups='["blue"]'><div class="sample1"><img src="images/アセット 2@228x-100.jpg"  alt=""/></li>
+	  <li data-groups='["others"]'><img src="images/o_01.jpg" width="290" height="200" alt=""/></li>
+	  <li data-groups='["red"]'><img src="images/gr.jpg" width="290" height="200" alt=""/></li>
+		<li data-groups='["others"]'><div class="sample2"><img src="images/o_03.png"  alt=""/></li>
+		<li data-groups='["others"]'><div class="sample1"><img src="images/o_04 (2).jpg"  alt=""/></li>
+			<li data-groups='["others"]'><div class="sample"><img src="images/o_02_c.jpg"  width="290" height="200"alt=""/></li>
+		<li data-groups='["others"]'><div class="sample1"><img src="images/o_02.png"  width="290" height="200"alt=""/></li>
+			<li data-groups='["blue"]'><div class="sample3"><img src="images/20200104_アートボード 1.jpg" alt=""/></li>
+			<li data-groups='["blue"]'><div class="sample3"><img src="images/20200106_アートボード 1.jpg" alt=""/></li>
+				<li data-groups='["blue"]'><div class="sample3"><img src="images/20200107_アートボード 1.jpg" alt=""/></li>
+		<li data-groups='["others"]'><div class="sample1"><img src="images/hushityo.jpg" alt=""/></li>
+			<li data-groups='["others"]'><div class="sample1"><img src="images/a4.jpg" alt=""/></li>
+				<li data-groups='["others"]'><div class="sample4"><img src="images/se.png" alt=""/></li>
+					<li data-groups='["green"]'><div class="sample1"><img src="images/profile.png" alt=""/></li>
+				<li data-groups='["green"]'><div class="sample1"><img src="images/2020-02-09 (1).png" alt=""/></li>
+				<li data-groups='["green"]'><div class="sample4"><img src="images/2020-02-09 (4).jpg" alt=""/></li>
+	</ul>
+</div>
+	
+		<footer>
+			<div class="bun">@ISHIKAWA HIKARI portfolio site.</div>
+		</footer>
+	</div>
+	</div>
+</html>
